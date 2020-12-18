@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                                    http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+                                    http://www.springframework.org/schema/context 
+                                    http://www.springframework.org/schema/context/spring-context-4.3.xsd
+">
+<!-- setter -->
+<!--<bean id ="productRepository" class ="com.company.spring_Product.repository.ProductRepository" />
+<bean id ="productService" class ="com.company.spring_Product.service.ProductService">
+    <property name="productRepository" ref="productRepository"></property>
+</bean>-->
+
+<!-- constructor -->
+<!--<bean id ="productRepository" class = "com.company.spring_Product.repository.ProductRepository"/>
+<bean id = "productService" class = "com.company.spring_Product.service.ProductService">
+<constructor-arg ref = "productRepository"/>
+</bean>-->
+
+<!--byName -->
+<!--<bean id = "productRepository" class = "com.company.spring_Product.repository.ProductRepository"/>
+<bean id = "productService" class = "com.company.spring_Product.service.ProductService" autowire="byName"/>-->
+
+<!--byType -->
+<!--<bean id = "productRepository" class = "com.company.spring_Product.repository.ProductRepository"/>
+<bean id = "productService" class = "com.company.spring_Product.service.ProductService" autowire="byType"/>-->
+
+<!--constructor -->
+<bean id = "productRepository" class = "com.company.spring_Product.repository.ProductRepository"/>
+<bean id = "productService" class = "com.company.spring_Product.service.ProductService" autowire="constructor"/>
+
+</beans>

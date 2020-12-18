@@ -1,0 +1,36 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.company.spring_Product.service;
+
+import com.company.spring_Product.model.Product;
+import com.company.spring_Product.repository.ProductRepository;
+import java.util.List;
+
+/**
+ *
+ * @author Admin
+ */
+public class ProductService {
+    private ProductRepository productRepository;
+
+// constructor
+    public ProductService(ProductRepository productRepository) {
+        this.productRepository = productRepository;
+    }
+
+// setter 
+//    public void setProductRepository(ProductRepository productRepository) {
+//        this.productRepository = productRepository;
+//    }
+    
+    public List<Product> getProduct(){
+        return productRepository. getProduct();
+    }
+    
+    public List<Product> findProductById (int id){
+        return productRepository.findProductById(id);
+    }
+}

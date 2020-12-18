@@ -1,0 +1,41 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.company.spring_Product.repository;
+
+import com.company.spring_Product.model.Product;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+/**
+ *
+ * @author Admin
+ */
+public class ProductRepository {
+    public List <Product> getProduct (){
+        Product product1 = new Product(1, "Table", 550.0, "new");
+        Product product2 = new Product(2, "Mouse", 150.0, "new");
+        Product product3 = new Product(2, "Lamp", 80.0, "old");
+        
+        List <Product> products = new ArrayList<>() ;
+         products.add(product1);
+         products.add(product2);  
+         products.add(product3);
+           
+          return products;
+     }
+    public List<Product> findProductById (int id){
+         List <Product> products = getProduct();
+         List <Product>results = new ArrayList<>();
+        for(Product product: products){
+           if(id == product.getId()){
+               results.add(product);
+            }
+        }
+         return results;
+ 
+}
+}
