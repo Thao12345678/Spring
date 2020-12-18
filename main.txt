@@ -31,5 +31,16 @@ public class main {
         for(Product result: results){
         System.out.println(result.toString());
         }
+	//class annotation java
+//        ApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class);
+//        ProductService productservice = (ProductService) context.getBean("productService");
+//        List <Product>products = productservice.getProduct();
+//        for(Product product: products){
+//            System.out.println(product.toString());
+//        }
+//         Scanner scanner = new Scanner(System.in);
+//        System.out.println("Nhap vao id can tim: ");
+//        int id = scanner.nextInt();
+//        System.out.println(productservice.findProductById(id));
     }
 }
